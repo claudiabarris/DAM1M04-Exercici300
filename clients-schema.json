@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "age": { "type": "integer" },
+      "loyalty_level": { "type": "string" },
+      "active": { "type": "boolean" },
+      "joined": { "type": "string" },
+      "contact": { "type": "object" },
+      "address": { "type": "object" },
+      "preferred_store": { "type": "object" },
+      "purchases": { "type": "array" },
+      "lifetime_spend": { "type": "number" }
+    },
+    "required": ["id", "name"]
+  }
+}
