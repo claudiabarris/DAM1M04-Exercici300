@@ -1,0 +1,30 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "common_name": { "type": "string" },
+      "scientific_name": { "type": "string" },
+      "native_range": { "type": "object", "properties": {
+          "countries": { "type": "array", "items": { "type": "string" } },
+          "biomes": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["countries", "biomes"]
+      },
+      "plant_type": { "type": "string" },
+      "average_height_m": { "type": "integer" },
+      "conservation_status": { "type": "string" },
+      "traits": { "type": "object", "properties": {
+          "leaf_type": { "type": "string" },
+          "notable_features": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["leaf_type", "notable_features"]
+      },
+      "address": { "type": "object" },
+      "preferred_store": { "type": "object" },
+      "purchases": { "type": "array" },
+      "lifetime_spend": { "type": "number" }
+    },
+    "required": ["id", "name"]
+  }
+}
