@@ -1,0 +1,52 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "common_name": { "type": "string" },
+      "scientific_name": { "type": "string" },
+      "conservation_status": { "type": "string" },
+      "average_mass_kg": { "type": "integer" },
+      "max_speed_kmh": { "type": "integer" },
+      "social_structure": { "type": "string" },
+      "habitat": {
+        "type": "object",
+        "properties": {
+          "biome": { "type": "string" },
+          "range_countries": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "protected_areas": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["biome", "range_countries"]
+      },
+      "diet": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "primary_foods": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["type", "primary_foods"]
+      },
+      "population_estimate": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string" },
+          "trend": { "type": "string" }
+        }
+      },
+      "threats": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "required": ["common_name", "scientific_name", "conservation_status", "habitat", "diet"]
+  }
+}
